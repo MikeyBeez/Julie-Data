@@ -82,6 +82,15 @@ mv vosk-model-en-us-0.22 model-en/
 python ../vosk-api/python/example/test_microphone.py
 # Start speaking.  You should see your words appear as text.  Make sure your microphone is turned on in settings sound.
 
+# Add model-en to .gitignore, commit and push.
+# Now install mpg123, and we are done with the foundations for TTS and STT.
+
+sudo apt install mpg123
+
+Add additional packages for modules: pip install pyautogui --use-feature=2020-resolver pip install wikipedia --use-feature=2020-resolver
+
+
+
 
 
 
