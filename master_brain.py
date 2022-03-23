@@ -3,15 +3,7 @@
 #############################################################
 #############################################################
 #
-#   Welcome to Juliet -- your virtual assistant.
-#   I'm hoping this code will read a lot like a
-#   book on computer science.  I hope to include enough
-#   comments to make this code easy to understand and
-#   modify.
-#
-#   You can say "Julia Help" 
-#   or "Julie Help" or 
-#   "Julie-Julie Help" to get started.
+#  Master Brain Experiment 1.
 #
 #############################################################
 #############################################################
@@ -19,7 +11,6 @@
 # Import system modules.
 # import os
 # Import my own modules in sub directories.
-# These are all likely to change.
 from SpeakAndHear import talktome
 from SpeakAndHear import mycommand
 from SpeakAndHear import mychat
