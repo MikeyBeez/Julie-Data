@@ -7,6 +7,7 @@ from SpeakAndHear import talktome
 from SpeakAndHear import mycommand
 from SpeakAndHear import mychat
 from GreyMatter import julibrain
+from GreyMatter import MemoryUtils
 import initualizejuliet as ij
 
 def myVars():
@@ -19,7 +20,7 @@ def myVars():
 def main():
     myVars()
     playcounter = 1
-    songs2play = 2
+    songs2play = 1
     try:
         ij.CheckMyModel()
     except SystemExit as e:
