@@ -17,6 +17,7 @@
 #############################################################
 
 # Import system modules.
+from doctest import OutputChecker
 import os
 # Import my own modules in sub directories.
 # These are all likely to change.
@@ -90,12 +91,13 @@ def main():
     while True:
         # listen for command. Speech to text listener
         # logic is called from inside the myCommand function.
-        output = mycommand.myCommand()[3:]
+        OutputChecker = mycommand.myCommand()
         # Remember,  the mycommand function takes in
         # audio from the microphone and returns text.
         # Therefore, the "output" variable is text.
-        if 'juli' in output:
-            print('Julia responds:\n')
+        if OutputChecker is not None:
+            if 'juli' in OutputChecker[3:]:
+               print('Julia responds:\n')
         # The assistant function responds to wake words
         # "Julie," "Julia," "Julius," or "Juliet."
         # It also gets whatever else you said, like
@@ -123,7 +125,7 @@ def main():
         # and off some of the actions.
         # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             try:
-                julibrain.assistant(output, playcounter, songs2play, runtest)
+                julibrain.assistant(OutputChecker[3:], playcounter, songs2play, runtest)
             except Exception as e:
                 print(e)
             # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -133,7 +135,7 @@ def main():
             # so you can see what Julie understood.
             # This may show you what to speak more clearly,
             # if you see she doesn't understand.
-            print(output)
+            print(OutputChecker[3:])
 
 # END MAIN FUNCTION
 
