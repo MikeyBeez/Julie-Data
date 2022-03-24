@@ -17,6 +17,7 @@
 #############################################################
 
 # Import system modules.
+# OutputChecker is a type with additional functionality.  It can be None
 from doctest import OutputChecker
 import os
 # Import my own modules in sub directories.
